@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>看球猜角度</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>看球猜角度</h1>
+        <div class="billiard-table">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="right-panel">
+
+            <div class="controls-panel">
+                <!-- Aim Guide Ball -->
+                <div class="aim-guide">
+                    <div class="guide-title">白球中心瞄准位置</div>
+                    <div class="guide-ball-container">
+                        <div class="guide-ball" id="guideBall">
+                            <div class="aim-point" id="aimPoint"></div>
+                        </div>
+                        <div class="guide-angle" id="guideAngle">角度: 0°</div>
+                    </div>
+                </div>
+
+                <div class="angle-options">
+                    <button data-angle="0">0°</button>
+                    <button data-angle="5">5°</button>
+                    <button data-angle="10">10°</button>
+                    <button data-angle="15">15°</button>
+                    <button data-angle="20">20°</button>
+                    <button data-angle="25">25°</button>
+                    <button data-angle="30">30°</button>
+                    <button data-angle="35">35°</button>
+                    <button data-angle="40">40°</button>
+                    <button data-angle="45">45°</button>
+                    <button data-angle="50">50°</button>
+                    <button data-angle="55">55°</button>
+                    <button data-angle="60">60°</button>
+                    <button data-angle="65">65°</button>
+                    <button data-angle="70">70°</button>
+
+                </div>
+                
+                <!-- Helper Lines Toggle -->
+                <div class="helper-controls">
+                    <label class="toggle-container">
+                        <input type="checkbox" id="helperLinesToggle">
+                        <span class="toggle-text">显示辅助线</span>
+                    </label>
+                    <button class="next-round-button" id="nextRoundBtn">下一轮</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <!-- Fixed Tip Container -->
+    <div class="tip-container" id="tipContainer">
+        <div class="tip-content">
+            <div class="tip-text" id="tipText"></div>
+            <button class="tip-close" id="tipClose">×</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
